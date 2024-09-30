@@ -38,10 +38,32 @@ class MainActivity : ComponentActivity() {
 fun ComposeQuadrantApp() {
     Column(Modifier.fillMaxWidth()) {
         Row(Modifier.weight(1f)) {
-            // First Row
+            ComposableInfoCard(
+                title = "First title",
+                description = "First description",
+                backgroundColor = Color(0xFFEADDFF),
+                modifier = Modifier.weight(1f)
+            )
+            ComposableInfoCard(
+                title = "Second title",
+                description = "Second description",
+                backgroundColor = Color(0xFFD0BCFF),
+                modifier = Modifier.weight(1f)
         }
         Row(Modifier.weight(1f)) {
-            // Second Row
+            Row(Modifier.weight(1f)) {
+                ComposableInfoCard(
+                    title = "Third title",
+                    description = "Third description",
+                    backgroundColor = Color(0xFFB69DF8),
+                    modifier = Modifier.weight(1f)
+                )
+                ComposableInfoCard(
+                    title = "Fourth title",
+                    description = "Fourth description",
+                    backgroundColor = Color(0xFFF6EDFF),
+                    modifier = Modifier.weight(1f)
+                )
         }
     }
 }
